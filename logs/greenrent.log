@@ -1,0 +1,143 @@
+2022-06-30 21:51:27,210 INFO  [restartedMain] com.greenrent.GreenRentApplication:Starting GreenRentApplication using Java 11.0.13 on DESKTOP-45Q2M8D with PID 5744 (D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent\target\classes started by FEO in D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent)
+2022-06-30 21:51:27,211 DEBUG [restartedMain] com.greenrent.GreenRentApplication:Running with Spring Boot v2.6.9, Spring v5.3.21
+2022-06-30 21:51:27,212 INFO  [restartedMain] com.greenrent.GreenRentApplication:No active profile set, falling back to 1 default profile: "default"
+2022-06-30 21:51:27,316 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-30 21:51:27,319 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-30 21:51:29,474 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 21:51:29,498 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2022-06-30 21:51:30,813 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2022-06-30 21:51:30,834 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2022-06-30 21:51:30,834 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-30 21:51:31,130 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2022-06-30 21:51:31,131 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 3811 ms
+2022-06-30 21:51:31,999 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 21:51:32,113 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-30 21:51:32,335 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-30 21:51:32,489 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2022-06-30 21:51:32,739 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2022-06-30 21:51:32,786 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-30 21:51:33,234 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 21:51:33,249 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 21:51:33,422 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 21:51:34,191 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2022-06-30 21:51:34,198 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-30 21:51:34,275 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 21:51:34,299 INFO  [restartedMain] com.greenrent.GreenRentApplication:Started GreenRentApplication in 8.499 seconds (JVM running for 10.81)
+2022-06-30 21:51:34,799 INFO  [RMI TCP Connection(1)-192.168.1.171] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-30 21:51:34,799 INFO  [RMI TCP Connection(1)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2022-06-30 21:51:34,802 INFO  [RMI TCP Connection(1)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 2 ms
+2022-06-30 22:01:53,821 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 22:01:53,833 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2022-06-30 22:01:53,852 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2022-06-30 23:07:30,472 INFO  [restartedMain] com.greenrent.GreenRentApplication:Starting GreenRentApplication using Java 11.0.13 on DESKTOP-45Q2M8D with PID 7040 (D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent\target\classes started by FEO in D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent)
+2022-06-30 23:07:30,475 DEBUG [restartedMain] com.greenrent.GreenRentApplication:Running with Spring Boot v2.6.9, Spring v5.3.21
+2022-06-30 23:07:30,476 INFO  [restartedMain] com.greenrent.GreenRentApplication:No active profile set, falling back to 1 default profile: "default"
+2022-06-30 23:07:30,577 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-30 23:07:30,578 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-30 23:07:32,422 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 23:07:32,482 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2022-06-30 23:07:33,282 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2022-06-30 23:07:33,294 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2022-06-30 23:07:33,295 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-30 23:07:33,427 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2022-06-30 23:07:33,428 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 2848 ms
+2022-06-30 23:07:33,707 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 23:07:33,761 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-30 23:07:33,909 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-30 23:07:34,041 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2022-06-30 23:07:34,217 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2022-06-30 23:07:34,234 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-30 23:07:36,012 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 23:07:36,027 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:07:37,164 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 23:07:38,860 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2022-06-30 23:07:38,869 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-30 23:07:38,983 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 23:07:39,020 INFO  [restartedMain] com.greenrent.GreenRentApplication:Started GreenRentApplication in 9.752 seconds (JVM running for 11.904)
+2022-06-30 23:07:39,582 INFO  [RMI TCP Connection(4)-192.168.1.171] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-30 23:07:39,585 INFO  [RMI TCP Connection(4)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2022-06-30 23:07:39,591 INFO  [RMI TCP Connection(4)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 5 ms
+2022-06-30 23:18:25,337 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:18:25,341 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2022-06-30 23:18:25,348 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2022-06-30 23:18:41,056 INFO  [restartedMain] com.greenrent.GreenRentApplication:Starting GreenRentApplication using Java 11.0.13 on DESKTOP-45Q2M8D with PID 8964 (D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent\target\classes started by FEO in D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent)
+2022-06-30 23:18:41,058 DEBUG [restartedMain] com.greenrent.GreenRentApplication:Running with Spring Boot v2.6.9, Spring v5.3.21
+2022-06-30 23:18:41,059 INFO  [restartedMain] com.greenrent.GreenRentApplication:No active profile set, falling back to 1 default profile: "default"
+2022-06-30 23:18:41,140 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-30 23:18:41,141 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-30 23:18:43,402 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 23:18:43,535 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+2022-06-30 23:18:44,354 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2022-06-30 23:18:44,367 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2022-06-30 23:18:44,367 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-30 23:18:44,556 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2022-06-30 23:18:44,556 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 3414 ms
+2022-06-30 23:18:44,899 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 23:18:44,943 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-30 23:18:45,098 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-30 23:18:45,264 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2022-06-30 23:18:45,464 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2022-06-30 23:18:45,486 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-30 23:18:46,496 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 23:18:46,505 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:18:47,075 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 23:18:47,815 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2022-06-30 23:18:47,821 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-30 23:18:47,886 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 23:18:47,924 INFO  [restartedMain] com.greenrent.GreenRentApplication:Started GreenRentApplication in 7.859 seconds (JVM running for 10.302)
+2022-06-30 23:18:48,646 INFO  [RMI TCP Connection(2)-192.168.1.171] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-30 23:18:48,649 INFO  [RMI TCP Connection(2)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2022-06-30 23:18:48,651 INFO  [RMI TCP Connection(2)-192.168.1.171] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 2 ms
+2022-06-30 23:24:23,012 INFO  [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:24:23,019 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2022-06-30 23:24:23,030 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2022-06-30 23:24:23,220 INFO  [restartedMain] com.greenrent.GreenRentApplication:Starting GreenRentApplication using Java 11.0.13 on DESKTOP-45Q2M8D with PID 8964 (D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent\target\classes started by FEO in D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent)
+2022-06-30 23:24:23,222 DEBUG [restartedMain] com.greenrent.GreenRentApplication:Running with Spring Boot v2.6.9, Spring v5.3.21
+2022-06-30 23:24:23,222 INFO  [restartedMain] com.greenrent.GreenRentApplication:No active profile set, falling back to 1 default profile: "default"
+2022-06-30 23:24:23,926 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 23:24:23,928 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-06-30 23:24:24,119 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2022-06-30 23:24:24,121 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2022-06-30 23:24:24,121 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-30 23:24:24,173 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2022-06-30 23:24:24,174 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 941 ms
+2022-06-30 23:24:24,301 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 23:24:24,311 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Starting...
+2022-06-30 23:24:24,487 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Start completed.
+2022-06-30 23:24:24,488 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-30 23:24:24,559 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 23:24:24,560 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:24:24,602 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 23:24:25,021 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2022-06-30 23:24:25,030 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-30 23:24:25,076 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 23:24:25,098 INFO  [restartedMain] com.greenrent.GreenRentApplication:Started GreenRentApplication in 1.96 seconds (JVM running for 347.476)
+2022-06-30 23:24:25,105 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2022-06-30 23:24:29,785 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:24:29,788 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown initiated...
+2022-06-30 23:24:29,795 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown completed.
+2022-06-30 23:24:29,951 INFO  [restartedMain] com.greenrent.GreenRentApplication:Starting GreenRentApplication using Java 11.0.13 on DESKTOP-45Q2M8D with PID 8964 (D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent\target\classes started by FEO in D:\Dropbox\Yazilim Isleri\2- Java Full-Stack\6- Proje\GreenRent)
+2022-06-30 23:24:29,952 DEBUG [restartedMain] com.greenrent.GreenRentApplication:Running with Spring Boot v2.6.9, Spring v5.3.21
+2022-06-30 23:24:29,952 INFO  [restartedMain] com.greenrent.GreenRentApplication:No active profile set, falling back to 1 default profile: "default"
+2022-06-30 23:24:30,530 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 23:24:30,543 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2022-06-30 23:24:30,693 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2022-06-30 23:24:30,694 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2022-06-30 23:24:30,694 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-30 23:24:30,741 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2022-06-30 23:24:30,741 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 783 ms
+2022-06-30 23:24:30,883 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 23:24:30,893 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Starting...
+2022-06-30 23:24:30,958 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Start completed.
+2022-06-30 23:24:30,959 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-30 23:24:31,100 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 23:24:31,101 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:24:31,311 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 23:24:31,854 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2022-06-30 23:24:31,864 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-30 23:24:31,930 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 23:24:31,950 INFO  [restartedMain] com.greenrent.GreenRentApplication:Started GreenRentApplication in 2.058 seconds (JVM running for 354.327)
+2022-06-30 23:24:31,959 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2022-06-30 23:25:32,255 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 23:25:32,257 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown initiated...
+2022-06-30 23:25:32,264 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown completed.
