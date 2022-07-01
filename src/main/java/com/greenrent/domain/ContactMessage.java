@@ -44,7 +44,7 @@ public class ContactMessage implements Serializable {
     @Column(length = 200, nullable = false)
     private String body;
 
-    @Email(message="Provide valid email")
+    @Email(message="Provide correct email")
     @Column(length = 50, nullable = false)
     private String email;
 

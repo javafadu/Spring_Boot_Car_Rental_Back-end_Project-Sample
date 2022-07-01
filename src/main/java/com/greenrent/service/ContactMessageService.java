@@ -3,6 +3,8 @@ package com.greenrent.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import com.greenrent.domain.ContactMessage;
 import com.greenrent.exception.ResourceNotFoundException;
@@ -28,7 +30,7 @@ public class ContactMessageService {
     }
 
 
-    public ContactMessage getContactMessage(Long id) throws ResourceNotFoundException {
+    public ContactMessage getContactMessage(Long id) {
         return repository.findById(id).orElseThrow(() ->
                 new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
     }
@@ -50,7 +52,10 @@ public class ContactMessageService {
 
         repository.save(foundMessage);
 
+    }
 
+    public Page<ContactMessage> getAllWithPage(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
 
