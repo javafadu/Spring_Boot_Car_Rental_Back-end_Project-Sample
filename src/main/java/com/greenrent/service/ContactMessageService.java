@@ -58,5 +58,9 @@ public class ContactMessageService {
         return repository.findAll(pageable);
     }
 
+    public List<ContactMessage> getByName(String name) {
+        return repository.findByName(name);
+    }
+
 
 }

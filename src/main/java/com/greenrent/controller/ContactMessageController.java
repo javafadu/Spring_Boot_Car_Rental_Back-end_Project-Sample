@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -103,6 +104,13 @@ public class ContactMessageController {
         Page<ContactMessage> contactMessagePage = contactMessageService.getAllWithPage(pageable);
 
         return ResponseEntity.ok(contactMessagePage);
+    }
+
+    // Sample for getting list of contact messages with requested name
+    @GetMapping("/isim/{name}")
+    public ResponseEntity<List<ContactMessage>> getAllListByName(@PathVariable("name") String name) {
+        List<ContactMessage> tumListe = contactMessageService.getByName(name);
+        return ResponseEntity.ok(tumListe);
     }
 
 
