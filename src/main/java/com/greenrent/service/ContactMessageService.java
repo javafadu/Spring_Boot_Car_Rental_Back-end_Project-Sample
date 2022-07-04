@@ -2,6 +2,7 @@ package com.greenrent.service;
 
 import java.util.List;
 
+import com.greenrent.exception.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -58,8 +59,14 @@ public class ContactMessageService {
         return repository.findAll(pageable);
     }
 
+    // FaDu Exception Ornek :
     public List<ContactMessage> getByName(String name) {
-        return repository.findByName(name);
+        if(repository.findByName(name).size()==0) {
+            throw new BadRequestException(String.format(ErrorMessage.NAME_NOT_FOUND, name));
+        } else {
+            return repository.findByName(name);
+        }
+
     }
 
 
