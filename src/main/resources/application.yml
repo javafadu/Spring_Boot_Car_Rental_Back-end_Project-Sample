@@ -17,6 +17,11 @@ spring:
     hibernate:
       ddl-auto: update
 
+greenrent:
+  app:
+    jwtSecret: greenRent@12
+    jwtExpirationMs: 86400000
+
 logging:
   file:
     name: logs/greenrent.log
@@ -26,6 +31,7 @@ logging:
     '[org.springframework.web]': INFO
     '[org.hibernate]': INFO
     '[com.greenrent]': DEBUG
+
 
 
 
