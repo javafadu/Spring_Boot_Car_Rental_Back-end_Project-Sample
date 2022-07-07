@@ -67,7 +67,6 @@ public class UserService {
                 new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 
         return userMapper.userToUserDTO(user);
-        // return UserMapper.INSTANCE.userToUserDTO(user);
     }
 
 

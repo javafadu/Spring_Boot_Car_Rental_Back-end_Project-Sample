@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping
@@ -31,17 +33,14 @@ public class UserJwtController {
     private JwtUtils jwtUtils;
 
 
-//   @PostMapping("/register")
-//   public ResponseEntity<Map<String,String>> createRegister(@RequestBody RegisterRequest registerRequest){
-//       userService.register(registerRequest);
-
-//       Map<String,String> map=new HashMap<>();
-//       map.put("message","User Successfully created");
-//       map.put("status", "true");
-
-//       return new ResponseEntity<>(map, HttpStatus.CREATED);
-
-//   }
+//  @PostMapping("/register")
+//  public ResponseEntity<Map<String,String>> createRegister(@RequestBody RegisterRequest registerRequest){
+//      userService.register(registerRequest);
+//      Map<String,String> map=new HashMap<>();
+//      map.put("message","User Successfully created");
+//      map.put("status", "true");
+//      return new ResponseEntity<>(map, HttpStatus.CREATED);
+//  }
 
 
     @PostMapping("/register")
