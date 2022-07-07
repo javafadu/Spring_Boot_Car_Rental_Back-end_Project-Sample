@@ -9,4 +9,10 @@ public class ErrorMessage {
     public final static String USER_NOT_FOUND="The username with email %s is not found";
 
     public final static String EMAIL_ALREADY_EXIST="Email already exists : %s";
+
+    public final static String NOT_PERMITTED_METHOD_MESSAGE="You do not have any permission to change this value";
+
+    public final static String PASSWORD_NOT_MATCHED="Your password are not matched";
+
+
 }

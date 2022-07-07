@@ -10,8 +10,9 @@ import com.greenrent.dto.UserDTO;
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 
-
+    // tek user i userDTO ya cevir
     UserDTO userToUserDTO(User user);
+    // User listesini UserDTO ya cevir
     List<UserDTO> map(List<User> user);
 
 }

@@ -51,6 +51,7 @@ public class User {
     @Column(length=15,nullable = false)
     private String zipCode;
 
+    // degistirilebilir veya degistirilemez (false ise degistirilebilir demek)
     @Column(nullable = false)
     private Boolean builtIn=false;
 
