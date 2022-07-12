@@ -118,6 +118,9 @@ public class UserController {
         response.setMessage(ResponseMessage.DELETE_RESPONSE_MESSAGE);
         response.setSuccess(true);
 
+        // delete response
+
+
         return ResponseEntity.ok(response);
     }
 

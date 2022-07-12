@@ -105,7 +105,11 @@ public class UserService {
         }
 
 
-        if(!BCrypt.hashpw(passwordRequest.getOldPassword(), user.getPassword()).equals(user.getPassword())) {
+ //       if(!BCrypt.hashpw(passwordRequest.getOldPassword(), user.getPassword()).equals(user.getPassword())) {
+ //           throw new BadRequestException(ErrorMessage.PASSWORD_NOT_MATCHED);
+ //       }
+
+        if(!passwordEncoder.matches(passwordRequest.getOldPassword(),user.getPassword())) {
             throw new BadRequestException(ErrorMessage.PASSWORD_NOT_MATCHED);
         }
 
