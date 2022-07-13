@@ -43,6 +43,12 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(error);
     }
 
+    @ExceptionHandler(ImageFileException.class)
+    protected ResponseEntity<Object> handleImageFileException(ImageFileException ex,WebRequest request){
+        ApiResponseError error=new ApiResponseError(HttpStatus.BAD_REQUEST,ex.getMessage(),request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
 
     @ExceptionHandler(AccessDeniedException.class)
     protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex,WebRequest request){
@@ -74,6 +80,9 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
         ApiResponseError error=new ApiResponseError(HttpStatus.BAD_REQUEST,ex.getMessage(),request.getDescription(false));
         return buildResponseEntity(error);
     }
+
+
+
 
 
     @Override

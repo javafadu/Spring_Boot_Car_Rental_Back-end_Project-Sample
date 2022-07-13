@@ -19,16 +19,21 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ImageFileService {
 
+    // ImageFileRepositor injection yapalim, yukariya da AllArg le birlike
     private ImageFileRepository imageFileRepository;
 
+    // image file in Id sini dondurecegimizden asagidaki method String deger dondurecek.
 
     public String saveImage(MultipartFile file) {
+        // gelen image dosyasinin filename ini alalim
         String fileName= StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
+        // cleanPath : gelen path in icinde nokta gibi seyler varsa icindeki karakterleri normalize ediyor.
+
         ImageFile imageFile=null;
         try {
             imageFile = new ImageFile(fileName, file.getContentType(), file.getBytes());
         } catch (IOException e) {
-
+            // ozel bir exception olusuturalim.
             throw new ImageFileException(e.getMessage());
         }
         imageFileRepository.save(imageFile);

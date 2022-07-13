@@ -20,16 +20,23 @@ import com.greenrent.service.ImageFileService;
 
 import lombok.AllArgsConstructor;
 
-@RestController
-@RequestMapping("/files")
+@RestController // Rest api lerimi yerlestirecegim
+@RequestMapping("/files") // base path belirledik
 @AllArgsConstructor
 public class ImageFileController {
 
     private ImageFileService imageFileService;
+    // ImageFileService injection, bunu yapinca yukariya @AllArgsConstructor da eklememiz gerekiyor
 
+    // image i upload eden bir method yazalim
     @PostMapping("/upload")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<ImageSavedResponse> uploadFile(@RequestParam("file") MultipartFile file ){
+
+        // MultipartFile : bize body degil, multipart yapi gelecek
+        // icinde image in ismi, data nin oldugu, byte olarak yapi
+
+
         String imageId= imageFileService.saveImage(file);
 
         ImageSavedResponse response=new ImageSavedResponse();
@@ -42,13 +49,15 @@ public class ImageFileController {
 
     }
 
-
+    // image leri getirebilmek icin arac bilgileri gelirken image bilgileri de gelmesi gerekiyor.
     @GetMapping("/download/{id}")
     public ResponseEntity<byte []> getImageFile(@PathVariable String id){
         ImageFile imageFile= imageFileService.getImageById(id);
 
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,"attachment; filename="+
                 imageFile.getName()).body(imageFile.getData());
+
+        // download eden taraf filename olarak download etsin, header bilgisinden okudu
     }
 
 

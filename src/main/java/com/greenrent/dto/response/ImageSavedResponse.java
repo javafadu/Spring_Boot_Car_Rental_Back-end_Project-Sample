@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+// All arg a gerek yok
 public class ImageSavedResponse extends GRResponse {
 
     private String imageId;

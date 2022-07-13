@@ -7,5 +7,7 @@ import com.greenrent.domain.ImageFile;
 
 @Repository
 public interface ImageFileRepository extends JpaRepository<ImageFile, String> {
+    // birinci parametre Entity tipi name
+    // ikinci parametre id leri tuttugumuz type
 
 }

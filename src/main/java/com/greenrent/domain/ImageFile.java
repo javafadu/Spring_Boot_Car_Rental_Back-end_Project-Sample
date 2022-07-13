@@ -21,23 +21,27 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Table(name="tbl_imagefile")
+@Table(name="tbl_imagefile")  // db deki table name tbl_imagefile olacak
 @Entity
 public class ImageFile {
 
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy="uuid2")
+    // uuid : universal unique identify
+    // uuid2 : daha gelismis bir yapiya sahip
     private String id;
 
     private String name;
 
     private String type;
 
-    @JsonIgnore
-    @Lob
+    @JsonIgnore // image bilgilerini disari cikarmak istemiyorsak
+    @Lob // image leri byte olarak tutmak istiyoruz
     private byte[] data;
 
+
+    // Constructor, ozel bir constructor id haric
     public ImageFile(String name, String type,byte[] data) {
         this.name=name;
         this.type=type;

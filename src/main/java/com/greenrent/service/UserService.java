@@ -143,12 +143,33 @@ public class UserService {
 
     }
 
+    // http://localhost:8080/user/1/auth
+    /*
+
+    {
+    "firstName": "John1",
+    "lastName": "Coffee1",
+    "password": "admin",
+    "phoneNumber": "(222) 317-8828",
+    "email": "coffee@email.com",
+    "address": "LosAngeles,USA",
+    "zipCode": "36548",
+    "builtIn": true,
+    "roles": [
+            "Administrator",
+            "Customer"
+    ]
+
+}
+
+     */
     // update any user with an id by Admin
     public void updateUserAuth(Long id, AdminUserUpdateRequest adminUserUpdateRequest) {
         // check if email exist or not
         boolean emailExist = userRepository.existsByEmail(adminUserUpdateRequest.getEmail());
         // check if user exist ot not
-        User user = userRepository.findById(id).get();
+        User user = userRepository.findById(id).
+                orElseThrow(()->new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE,id)));
         // check if user builtin or not
         if (user.getBuiltIn()) {
             throw new BadRequestException(ErrorMessage.NOT_PERMITTED_METHOD_MESSAGE);
@@ -170,6 +191,8 @@ public class UserService {
             adminUserUpdateRequest.setPassword(encodedPassword);
         }
 
+
+
         // rol bilgisini alan
         Set<String> userStrRoles = adminUserUpdateRequest.getRoles();
         Set<Role> roles = convertRoles(userStrRoles);
@@ -185,6 +208,7 @@ public class UserService {
 
 
     // Delete user
+    // @Transactional
     public void removeById(Long id) {
         User user = userRepository.findById(id).orElseThrow(() -> new
                 ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
@@ -194,6 +218,13 @@ public class UserService {
         }
 
         userRepository.deleteById(id);
+
+       // throw new BadRequestException("occured exception");
+        // method basinda @Transactional varsa method icinde ne yaparsa yapsin,
+        // exception firlatinca exceptiondan once ne degisiklik yapilmissa geri alir
+        // rollback
+
+
     }
 
     public Set<Role> convertRoles(Set<String> pRoles) {
