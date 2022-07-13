@@ -3,6 +3,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import com.greenrent.dto.request.AdminUserUpdateRequest;
 import com.greenrent.dto.request.UpdatePasswordRequest;
 import com.greenrent.dto.request.UserUpdateRequest;
 import com.greenrent.dto.response.GRResponse;
@@ -122,6 +123,21 @@ public class UserController {
 
 
         return ResponseEntity.ok(response);
+    }
+
+    @PutMapping("/{id}/auth")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<GRResponse> updateUserAuth(@PathVariable Long id, @Valid
+    @RequestBody AdminUserUpdateRequest adminUserUpdateRequest) {
+
+        userService.updateUserAuth(id,adminUserUpdateRequest);
+
+        GRResponse response = new GRResponse();
+        response.setMessage(ResponseMessage.UPDATE_RESPONSE_MESSAGE);
+        response.setSuccess(true);
+
+        return ResponseEntity.ok(response);
+
     }
 
 }
