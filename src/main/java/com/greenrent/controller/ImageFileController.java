@@ -1,5 +1,6 @@
 package com.greenrent.controller;
 
+import com.greenrent.dto.ImageFileDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,6 +20,8 @@ import com.greenrent.dto.response.ResponseMessage;
 import com.greenrent.service.ImageFileService;
 
 import lombok.AllArgsConstructor;
+
+import java.util.List;
 
 @RestController // Rest api lerimi yerlestirecegim
 @RequestMapping("/files") // base path belirledik
@@ -58,6 +61,7 @@ public class ImageFileController {
                 imageFile.getName()).body(imageFile.getData());
 
         // download eden taraf filename olarak download etsin, header bilgisinden okudu
+        // CONTENT_DISPOSITIO ile download edebiliyoruz ya da byte kodlarını görebiliyoruz.
     }
 
     // image display
@@ -69,6 +73,17 @@ public class ImageFileController {
         header.setContentType(MediaType.IMAGE_PNG);
 
         return new ResponseEntity<>(imageFile.getData(),header,HttpStatus.OK);
+    }
+
+    // butun image dosyalarini almak icin method
+    @GetMapping
+    @PreAuthorize("hasRole('ADMIN')") // admin tarafindan getirilebilsin
+    public ResponseEntity<List<ImageFileDTO>> getAllImages() {
+        List<ImageFileDTO> imageList = imageFileService.getAllImages();
+
+        // return ResponseEntity.ok(imageList);
+
+        return ResponseEntity.status(HttpStatus.OK).body(imageList);
     }
 
 

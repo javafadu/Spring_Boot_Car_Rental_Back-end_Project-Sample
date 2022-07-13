@@ -38,6 +38,8 @@ public class ImageFile {
 
     @JsonIgnore // image bilgilerini disari cikarmak istemiyorsak
     @Lob // image leri byte olarak tutmak istiyoruz
+    // resimleri veritabaninda tutabiliyoruz.
+    // image in datasini tutuyoruz.
     private byte[] data;
 
 
