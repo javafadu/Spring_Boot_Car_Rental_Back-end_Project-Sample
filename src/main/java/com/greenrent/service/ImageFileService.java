@@ -40,7 +40,7 @@ public class ImageFileService {
         return imageFile.getId();
     }
 
-
+    //
     public ImageFile getImageById(String id) {
         ImageFile imageFile=  imageFileRepository.findById(id).
                 orElseThrow(()->new ResourceNotFoundException(String.format(ErrorMessage.IMAGE_NOT_FOUND_MESSAGE, id)));

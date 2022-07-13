@@ -60,7 +60,7 @@ public class ImageFileController {
         // download eden taraf filename olarak download etsin, header bilgisinden okudu
     }
 
-
+    // image display
     @GetMapping("/display/{id}")
     public ResponseEntity<byte []> displayFile(@PathVariable String id){
         ImageFile imageFile= imageFileService.getImageById(id);
