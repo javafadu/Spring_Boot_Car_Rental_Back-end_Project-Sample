@@ -34,7 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  { // guvenl
         http.csrf().disable().
                 sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().
 
-                authorizeRequests().antMatchers("/register","/login","/files/download/**","/files/display/**","/contactmessage/visitors","/car/visitors/all").permitAll().
+                authorizeRequests().antMatchers("/register","/login","/files/download/**","/files/display/**","/contactmessage/visitors","/car/visitors/**").permitAll().
                 anyRequest().authenticated();
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

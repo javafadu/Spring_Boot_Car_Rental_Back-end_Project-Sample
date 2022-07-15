@@ -7,4 +7,8 @@ public class ResponseMessage {
     public final static String DELETE_RESPONSE_MESSAGE="User Successfully Deleted";
     public final static String IMAGE_SAVED_RESPONSE_MESSAGE="Image File Saved Successfully";
 
+    public final static String CAR_SAVED_RESPONSE_MESSAGE="Car Saved Successfully";
+    public final static String CAR_UPDATE_RESPONSE_MESSAGE="Car Updated Successfully";
+    public final static String CAR_DELETE_RESPONSE_MESSAGE="Car Deleted Successfully";
+
 }
