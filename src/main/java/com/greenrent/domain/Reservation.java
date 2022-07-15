@@ -26,7 +26,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Table(name="tbl_reservation")
+@Table(name = "tbl_reservation")
 @Entity
 public class Reservation {
 
@@ -35,15 +35,12 @@ public class Reservation {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name="car_id",referencedColumnName = "id")
-    // Car table icinde id referansini alarak car_id olarak burada variable olusturmamiza yariyor
-    // car_id : db de field name
-    // carId : POJO Class da variable ismi
+    @JoinColumn(name = "car_id", referencedColumnName = "id")
     private Car carId;
 
 
     @OneToOne
-    @JoinColumn(name="user_id", referencedColumnName = "id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User userId;
 
     @Column(nullable = false)
@@ -52,14 +49,14 @@ public class Reservation {
     @Column(nullable = false)
     private LocalDateTime dropOffTime;
 
-    @Column(length=150, nullable = false)
+    @Column(length = 150, nullable = false)
     private String pickUpLocation;
 
-    @Column(length=150, nullable = false)
+    @Column(length = 150, nullable = false)
     private String dropOffLocation;
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 30,nullable = false)
+    @Column(length = 30, nullable = false)
     private ReservationStatus status;
 
     @Column(nullable = false)
@@ -67,7 +64,6 @@ public class Reservation {
 
     public Long getTotalHours(LocalDateTime pickUpTime, LocalDateTime dropOffTime) {
         return ChronoUnit.HOURS.between(pickUpTime, dropOffTime);
-        // total hours between two datetime
     }
 
 

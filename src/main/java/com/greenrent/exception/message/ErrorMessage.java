@@ -18,5 +18,7 @@ public class ErrorMessage {
 
     public final static String RESERVATION_TIME_INCORRECT_MESSAGE="Reservation pick up time or drop off time not correct";
 
+    public final static String CAR_NOT_AVAILABLE_MESSAGE="Car is not available for selected times";
+
 
 }
