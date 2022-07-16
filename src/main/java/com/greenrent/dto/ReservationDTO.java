@@ -1,16 +1,22 @@
 package com.greenrent.dto;
+
 import java.time.LocalDateTime;
+
 import com.greenrent.domain.Reservation;
 import com.greenrent.domain.enums.ReservationStatus;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class ReservationDTO {
+
     private Long id;
 
     private CarDTO carId;
@@ -18,11 +24,13 @@ public class ReservationDTO {
     private Long userId;
 
     private LocalDateTime pickUpTime;
+
     private LocalDateTime dropOffTime;
 
     private String pickUpLocation;
 
     private String dropOffLocation;
+
     private ReservationStatus status;
 
     private Double totalPrice;

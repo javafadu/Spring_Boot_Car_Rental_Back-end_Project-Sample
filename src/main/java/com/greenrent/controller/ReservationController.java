@@ -2,14 +2,13 @@ package com.greenrent.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import com.greenrent.domain.Reservation;
 import com.greenrent.dto.ReservationDTO;
+import com.greenrent.dto.request.ReservationRequest;
 import com.greenrent.dto.request.ReservationUpdateRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import com.greenrent.dto.request.ReservationRequest;
 import com.greenrent.dto.response.GRResponse;
 import com.greenrent.dto.response.ResponseMessage;
 import com.greenrent.service.ReservationService;
