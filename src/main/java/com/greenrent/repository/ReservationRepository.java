@@ -23,6 +23,10 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<ReservationDTO> findAllByUserId(User userId);
 
+    Optional<ReservationDTO> findByIdAndUserId(Long id, User user);
+    // if we want to search multiple field we can use AND between each field name;
+
+
 
     @Query("SELECT r FROM Reservation r "
             + "JOIN FETCH Car cd on r.carId=cd.id WHERE "
@@ -34,6 +38,10 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<Reservation> checkCarStatus(@Param("carId") Long carId, @Param("pickUpTime") LocalDateTime pickUpTime,
                                      @Param("dropOffTime") LocalDateTime dropOffTime, @Param("status") ReservationStatus[] status);
+
+
+
+
 
 
 }

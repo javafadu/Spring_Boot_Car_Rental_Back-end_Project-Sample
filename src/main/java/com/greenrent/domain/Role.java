@@ -30,6 +30,8 @@ public class Role {
     private RoleType name;
 
 
-
-
+    @Override
+    public String toString() {
+        return ""+name;
+    }
 }
