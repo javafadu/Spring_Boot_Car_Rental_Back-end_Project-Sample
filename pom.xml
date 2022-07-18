@@ -20,6 +20,7 @@
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
         <lombok.version>1.18.24</lombok.version>
         <apache.poi.version>4.1.0</apache.poi.version>
+        <springdoc.openapi.version>1.6.9</springdoc.openapi.version>
     </properties>
 
     <dependencies>
@@ -94,6 +95,14 @@
             <artifactId>poi-ooxml</artifactId>
             <version>${apache.poi.version}</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc.openapi.version}</version>
+        </dependency>
+
 
 
     </dependencies>

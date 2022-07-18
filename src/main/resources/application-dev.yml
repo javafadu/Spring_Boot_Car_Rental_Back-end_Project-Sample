@@ -1,0 +1,11 @@
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['info','trace','auditevents','threaddump','configprops','health','env','metrics','logfile','loggers','beans']
+
+  info:
+    env:
+      enabled: true

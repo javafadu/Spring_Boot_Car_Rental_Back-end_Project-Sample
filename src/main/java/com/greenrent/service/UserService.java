@@ -10,6 +10,7 @@ import com.greenrent.dto.request.AdminUserUpdateRequest;
 import com.greenrent.dto.request.UpdatePasswordRequest;
 import com.greenrent.dto.request.UserUpdateRequest;
 import com.greenrent.exception.BadRequestException;
+import com.greenrent.repository.ReservationRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -38,6 +39,8 @@ public class UserService {
     private RoleRepository roleRepository;
 
     private PasswordEncoder passwordEncoder;
+
+    private ReservationRepository reservationRepository;
 
     private UserMapper userMapper;
 
@@ -212,6 +215,11 @@ public class UserService {
     public void removeById(Long id) {
         User user = userRepository.findById(id).orElseThrow(() -> new
                 ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
+
+        boolean exists = reservationRepository.existsByUserId(user);
+        if(exists) {
+            throw new BadRequestException(ErrorMessage.USER_USED_BY_RESERVATION_MESSAGE);
+        }
 
         if (user.getBuiltIn()) {
             throw new BadRequestException(ErrorMessage.NOT_PERMITTED_METHOD_MESSAGE);

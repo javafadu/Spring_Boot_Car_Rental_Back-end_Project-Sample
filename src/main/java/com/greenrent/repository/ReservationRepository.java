@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+import com.greenrent.domain.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,6 +17,11 @@ import com.greenrent.dto.ReservationDTO;
 
 @Repository
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
+
+    boolean existsByCarId(Car car);
+
+    boolean existsByUserId(User user);
+
 
     List<ReservationDTO> findAllBy();
 

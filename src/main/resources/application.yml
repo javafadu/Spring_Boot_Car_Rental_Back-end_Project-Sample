@@ -37,7 +37,11 @@ logging:
     '[org.hibernate]': INFO
     '[com.greenrent]': DEBUG
 
-
+info:
+  application:
+    name: 'GreenRent Backend Application'
+    description: 'This is GreenRent Backend App dev by GreenRent Dev Team'
+    version: '@project.version@'
 
 
 
