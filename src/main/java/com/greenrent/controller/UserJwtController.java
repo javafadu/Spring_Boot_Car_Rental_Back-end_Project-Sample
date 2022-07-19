@@ -29,7 +29,6 @@ public class UserJwtController {
 
     private UserService userService; // @AllArg ekledigimiz icin Autowired e gerek yok.
     private AuthenticationManager authManager;
-
     private JwtUtils jwtUtils;
 
 

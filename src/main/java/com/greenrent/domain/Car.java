@@ -59,7 +59,8 @@ public class Car {
 
     private Boolean builtIn=false;
 
-
+    // Lazy iliskilerde car bilgisini getirirken image bilgisi gelmeyecektir.
+    // Eager olsaydi car bilgisi cekerken image bilgisi de gelecekti.
     @ManyToMany(fetch=FetchType.LAZY)
     @JoinTable(name="tbl_car_image", joinColumns = @JoinColumn(name="car_id"),
             inverseJoinColumns = @JoinColumn(name="imfile_id"))

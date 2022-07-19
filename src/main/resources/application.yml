@@ -16,6 +16,15 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+    properties:
+      format-sql: true
+      #hibernate:
+        #enable_lazy_load_trans: true
+    # yukarida lazy yapilmis ama eager olmasi gereken yerlerde eager gibi davranir
+
+    # open-in-view default degeri true olarak gelir.
+    # iliski lazy yapilsa dahi  view render edilene kadar veya json datasi olusana kadar transaction acik kaliyor
+    ##open-in-view: false
 
   servlet:
     multipart:
