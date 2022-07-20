@@ -42,6 +42,7 @@ public class UserJwtController {
 //  }
 
 
+    // 1- Register User
     @PostMapping("/register")
     public ResponseEntity<GRResponse> register(@Valid @RequestBody RegisterRequest registerRequest) {
         userService.register(registerRequest);
