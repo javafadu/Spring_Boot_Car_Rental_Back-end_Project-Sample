@@ -41,19 +41,21 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(error);
     }
 
-
+    //3 - BadRequest Exception:
     @ExceptionHandler(BadRequestException.class)
     protected ResponseEntity<Object> handleBadRequestException(BadRequestException ex, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
         return buildResponseEntity(error);
     }
 
+    //4 - ImageFile Exception:
     @ExceptionHandler(ImageFileException.class)
     protected ResponseEntity<Object> handleImageFileException(ImageFileException ex, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
         return buildResponseEntity(error);
     }
 
+    //5 - ExcelReport Exception:
     @ExceptionHandler(ExcelReportException.class)
     protected ResponseEntity<Object> handleExcelReportException(ExcelReportException ex, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage(), request.getDescription(false));
@@ -61,17 +63,6 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
 
-    @ExceptionHandler(AccessDeniedException.class)
-    protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex, WebRequest request) {
-        ApiResponseError error = new ApiResponseError(HttpStatus.FORBIDDEN, ex.getMessage(), request.getDescription(false));
-        return buildResponseEntity(error);
-    }
-
-    @ExceptionHandler(AuthenticationException.class)
-    protected ResponseEntity<Object> handleAuthenticationException(AuthenticationException ex, WebRequest request) {
-        ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
-        return buildResponseEntity(error);
-    }
 
 
     @Override
@@ -103,6 +94,18 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex, WebRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.FORBIDDEN, ex.getMessage(), request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
+    @ExceptionHandler(AuthenticationException.class)
+    protected ResponseEntity<Object> handleAuthenticationException(AuthenticationException ex, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
         return buildResponseEntity(error);
     }
