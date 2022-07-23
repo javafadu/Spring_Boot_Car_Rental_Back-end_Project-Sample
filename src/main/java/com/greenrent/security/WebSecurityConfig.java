@@ -26,7 +26,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @AllArgsConstructor // constructor injection yapabilmek icin bunu ekliyoruz.
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter  { // guvenlik ile ilgili
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter { // guvenlik ile ilgili
     private UserDetailsService userDetailsService;
 
 
@@ -35,8 +35,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  { // guvenl
 
         http.csrf().disable().
                 sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().
-                authorizeRequests().antMatchers(HttpMethod.OPTIONS,"/**").permitAll().and().
-                authorizeRequests().antMatchers("/register","/login","/files/download/**","/files/display/**","/contactmessage/visitors","/car/visitors/**").permitAll().
+                authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll().and().
+                authorizeRequests().antMatchers("/register", "/login", "/files/download/**", "/files/display/**",
+                        "/contactmessage/visitors", "/car/visitors/**").permitAll().
                 anyRequest().authenticated();
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
@@ -70,14 +71,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  { // guvenl
     }
 
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
-
-
-
 
 
     @Bean

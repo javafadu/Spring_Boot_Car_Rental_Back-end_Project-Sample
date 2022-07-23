@@ -20,9 +20,13 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class UserDetailsImpl implements UserDetails {
 
+
     /**
-     *
+     * Spring security does not know my User entity class.
+     * It considers UserDetails interface imported with spring security. So we need a class to Implement
+     * user information from UserDetails class and mix with our User information.
      */
+
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -38,7 +42,7 @@ public class UserDetailsImpl implements UserDetails {
         List<GrantedAuthority> authorities = user.getRoles().stream().map(role -> new SimpleGrantedAuthority(role.getName().name()))
                 .collect(Collectors.toList());
 
-        return new UserDetailsImpl(user.getId(),user.getEmail(),user.getPassword(),authorities);
+        return new UserDetailsImpl(user.getId(), user.getEmail(), user.getPassword(), authorities);
     }
 
 
