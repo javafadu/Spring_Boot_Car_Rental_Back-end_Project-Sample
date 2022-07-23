@@ -64,8 +64,8 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
 
 
 
-
-    @Override
+    // 6 - MethodArgumentNotValid (coming from ResponseEntityExceptionHandler) class calling Method1 with an ApiResponseError error object
+    // these exceptions comes from @Valid filter also    @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
         List<String> errors = ex.getBindingResult().getFieldErrors().stream().map(e -> e.getDefaultMessage()).collect(Collectors.toList());
@@ -74,7 +74,7 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
 
     }
 
-
+    // 7 - TypeMismatch (coming from ResponseEntityExceptionHandler) class calling Method1 with an ApiResponseError error object
     @Override
     protected ResponseEntity<Object> handleTypeMismatch(TypeMismatchException ex, HttpHeaders headers,
                                                         HttpStatus status, WebRequest request) {
@@ -82,7 +82,7 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(error);
     }
 
-
+    // 8 - ConversionNotSupported (coming from ResponseEntityExceptionHandler) class calling Method1 with an ApiResponseError error object
     @Override
     protected ResponseEntity<Object> handleConversionNotSupported(ConversionNotSupportedException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -90,7 +90,7 @@ public class GreenRentExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(error);
     }
 
-
+    // 9 - HttpMessageNotReadable (coming from ResponseEntityExceptionHandler) class calling Method1 with an ApiResponseError error object
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
